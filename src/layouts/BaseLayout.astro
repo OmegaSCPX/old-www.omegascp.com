@@ -1,0 +1,21 @@
+---
+import { SEO } from 'astro-seo';
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width" />
+
+    <SEO charset='utf8' title={title} extend={{
+      link: [{ rel: 'icon', href: 'favicon.svg' }]
+    }}/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body>
+    <div class='prose prose-zinc'>
+      <slot/>
+    </div>
+	</body>
+</html>
